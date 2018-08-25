@@ -11,6 +11,7 @@ export default class DrumPad extends Component {
 
   onClick = () => {
     this.audioRef.current.play();
+    this.props.clickListener(this.props.drum.audioName);
   }
 
   render() {
