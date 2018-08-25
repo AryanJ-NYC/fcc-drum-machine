@@ -53,7 +53,7 @@ export default class DrumKit extends Component {
           target={document}
           onKeyDown={this.handleKeyDown}
         />
-        <Columns isCentered isMultiline>
+        <Columns isCentered isMobile isMultiline>
           {this.renderDrumPads()}
         </Columns>
         <Title className="has-text-centered">{ this.state.lastPlayedAudioName }</Title>
