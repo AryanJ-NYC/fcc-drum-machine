@@ -6,9 +6,9 @@ import drumData from '../data/drums.json';
 export default class DrumKit extends Component {
   renderDrumPads() {
     return drumData.map(drum => (
-      <Column isSize='1/3'>
+      <Column isSize='1/3' key={drum.key}>
         <div className="has-text-centered">
-          <DrumPad id={drum.id} key={drum.id}></DrumPad>
+          <DrumPad drum={drum}></DrumPad>
         </div>
       </Column>
     ));
