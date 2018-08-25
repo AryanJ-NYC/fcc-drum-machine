@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import './DrumPad.css';
+import { Button } from 'bloomer';
 
 export default class DrumPad extends Component {
   render() {
     return (
-      <div className="drum-pad">
+      <Button className="drum-pad" id={this.props.id}>
         { this.props.id }
-      </div>
+      </Button>
     )
   }
 }
