@@ -1,4 +1,4 @@
-import React, { createRef, Component } from 'react';
+import React, { createRef, Component, Fragment } from 'react';
 import EventListener from 'react-event-listener';
 import { Column, Columns, Title } from 'bloomer';
 import DrumPad from '../components/DrumPad';
@@ -46,7 +46,7 @@ export default class DrumKit extends Component {
 
   render() {
     return (
-      <div id="display">
+      <Fragment>
         <EventListener
           target={document}
           onKeyDown={this.handleKeyDown}
@@ -55,7 +55,7 @@ export default class DrumKit extends Component {
           {this.renderDrumPads()}
         </Columns>
         <Title className="has-text-centered">{ this.state.lastPlayedAudioName }</Title>
-      </div>
+      </Fragment>
     );
   }
 }
