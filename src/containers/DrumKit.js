@@ -34,14 +34,12 @@ export default class DrumKit extends Component {
 
   renderDrumPads = () => {
     return drumData.map(drum => (
-      <Column isSize='1/3' key={drum.key}>
-        <div className="has-text-centered">
-          <DrumPad
-            drum={drum}
-            ref={this.drumPadRefs[drum.key]}
-            clickListener={this.setLastPlayedAudioName}
-          />
-        </div>
+      <Column className="has-text-centered" isSize='1/3' key={drum.key}>
+        <DrumPad
+          drum={drum}
+          ref={this.drumPadRefs[drum.key]}
+          clickListener={this.setLastPlayedAudioName}
+        />
       </Column>
     ));
   }
