@@ -18,7 +18,7 @@ export default class DrumPad extends Component {
     const { audioName, key } = this.props.drum;
     return (
       <div className="drum-pad" id={audioName}>
-        <Button onClick={this.onClick}>{ key }</Button>
+        <Button isSize="large" onClick={this.onClick}>{ key }</Button>
         <audio className="clip" id={key} ref={this.audioRef} src={this.audioSrc}></audio>
       </div>
     )
